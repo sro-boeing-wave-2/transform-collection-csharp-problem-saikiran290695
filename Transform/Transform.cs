@@ -6,13 +6,14 @@ namespace Transform
 {
     public static class Transform 
     {
-        public static List<int> Map(this int[] x, Func<int, int>condition)
+        public static List<int> Map(this int[] list, Func<int, int>condition)
         {
-          List<int> temp = new List<int>();
-            foreach(int present in x){
-                temp.Add(condition(present));
+          List<int> response = new List<int>();
+            foreach(int present in list)
+            {
+                response.Add(condition(present));
             }
-            return temp;
+            return response;
         }
     }
 }
